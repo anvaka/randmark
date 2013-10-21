@@ -8,7 +8,7 @@
     'Robert Jenkins\' 32 bit integer hash function': function () {
       // Thanks for John-David Dalton for pointing this out. This is taken
       // from https://code.google.com/p/octane-benchmark/source/browse/trunk/base.js#89
-      var seed = 49734321;
+      var seed = +new Date();
       var random = function() {
         // Robert Jenkins' 32 bit integer hash function.
         seed = ((seed + 0x7ed55d16) + (seed << 12))  & 0xffffffff;
